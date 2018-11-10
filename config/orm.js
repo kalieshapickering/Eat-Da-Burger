@@ -79,6 +79,14 @@ var orm = {
   
         cb(result);
       });
+    },
+
+    delete: function(table, id, cd) {
+      var queryString = "DELETE FROM ?? WHERE id = ?";
+
+      connection.query(queryString, [table, id], function(err, result){
+        cd(err, result);
+      });
     }
   };
 

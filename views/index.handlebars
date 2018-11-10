@@ -1,0 +1,32 @@
+<div class="container">
+    <img src="assets/images/burger.jpg" />
+    <div>
+        <form id="newBurgerSubmit">
+            <input id="burgerField" type="text" name="newBurger" placeholder="Add a new Burger">
+            <input type="submit">
+        </form>
+    </div>
+</div>
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Burger name</th>
+                <th>Hungry?</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each burger}}
+            <tr>
+                <td>{{ burger_name }}</td>
+                <td>
+                    <button class="devourButton" data-id={{ id }}>Munch</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+
+</div>
