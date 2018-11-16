@@ -1,32 +1,54 @@
 <div class="container">
-    <img src="assets/images/burger.jpg" />
-    <div>
-        <form id="newBurgerSubmit">
-            <input id="burgerField" type="text" name="newBurger" placeholder="Add a new Burger">
-            <input type="submit">
-        </form>
+    <div class="burgerPhoto">
+
+        <img class="burgerImg" src="assets/images/burger.jpg" />
+
     </div>
 </div>
+<br><br><br>
 <div class="container">
 
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>Burger name</th>
-                <th>Hungry?</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each burger}}
-            <tr>
-                <td>{{ burger_name }}</td>
-                <td>
-                    <button class="devourButton" data-id={{ id }}>Munch</button>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="cardTitle selTitle">
+                    <h3>Add a Burger to the Menu</h3>
+                </div>
+                <br>
+                <div>
+                    <form id="newBurgerSubmit">
+                        <input id="burgerField" class="inputBar" type="text" name="newBurger" placeholder="Add a new Burger">
+                        <input type="submit">
+                    </form>
+                </div>
+                <br><br>
+            </div>
+        </div>
 
-    </table>
+        <div class="col">
 
-</div>
+            <div class="card">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Burger Name</th>
+                            <th>Hungry?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each burger}}
+                        <tr>
+                            <td>{{ burger_name }}</td>
+                            <td>
+                                <button class="devourButton" data-id={{ id }}>Munch</button>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>

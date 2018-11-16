@@ -1,0 +1,15 @@
+.burgerImg {    border: 10px;
+    border-style: solid;
+    height: 400px;
+    margin-left: 30%;
+}
+body {
+    background-color: aquamarine;
+}
+.selTitle {
+    margin-left: 20%;
+}
+.inputBar {
+    width: 20em;
+    margin-left: 15%;
+}
